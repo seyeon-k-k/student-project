@@ -6,7 +6,7 @@ namespace student_project
     public partial class Form1 : Form
     {
         //Location of the database
-        SQLiteConnection con = new SQLiteConnection("Data Source=C:\\Users\\KK\\Desktop\\DATA.db");
+        SQLiteConnection con = new SQLiteConnection("Data Source=" + Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\DATA.db");
         public Form1()
         {
             InitializeComponent();
@@ -75,7 +75,7 @@ namespace student_project
         {
             //SQL command to get data 
             //!!!!!!!!!!!!! AS is used as a keyword need to change the table name
-            string querry = "SELECT * FROM AS";
+            string querry = "SELECT * FROM AAS";
 
             //Does the command on the given database
             SQLiteCommand cmd = new SQLiteCommand(querry, con);

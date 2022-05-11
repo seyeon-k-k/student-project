@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace student_project
 {
     public partial class Form2 : Form
     {
         //Location of the database
-        SQLiteConnection con = new SQLiteConnection("Data Source=C:\\Users\\KK\\Desktop\\DATA.db");
+        SQLiteConnection con = new SQLiteConnection("Data Source=" + Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\DATA.db");
         public Form2()
         {
             InitializeComponent();
